@@ -112,7 +112,7 @@ button:hover {
     }
 }
 
-/* POP-UP SURPRISE */
+/* SURPRISE MODAL */
 
 .surprise-modal {
     position: fixed;
@@ -153,12 +153,12 @@ button:hover {
     line-height: 1.9;
 }
 
-/* TOMBOL CONFESSION */
+/* TOMBOL NEXT */
 
 .next-btn {
     display: block;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 25px;
     padding: 15px;
     border-radius: 30px;
     background: #e6c778;
@@ -166,7 +166,7 @@ button:hover {
     text-decoration: none;
     font-size: 12px;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     transition: .3s;
 }
 
@@ -176,6 +176,7 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+
     .surprise-box {
         padding: 30px 20px;
     }
@@ -183,4 +184,5 @@ button:hover {
     .surprise-box h2 {
         font-size: 36px;
     }
+
 }
