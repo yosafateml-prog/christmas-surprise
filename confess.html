@@ -1,138 +1,239 @@
 <!DOCTYPE html>
-<html lang="id">
-
+<html lang="en">
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Something For You 💌</title>
+    <title>Something For You | Nauli</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            margin: 0;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-
-            background: linear-gradient(
-                135deg,
-                #061a18,
-                #12352c
-            );
-
+            padding: 25px;
+            font-family: 'Montserrat', sans-serif;
             color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
+            background:
+                radial-gradient(circle, #174535, #071d19, #020b0c);
+            overflow-x: hidden;
         }
 
-        .letter {
-            max-width: 450px;
+        .container {
             width: 100%;
-            padding: 35px 25px;
-
+            max-width: 500px;
+            padding: 40px 28px;
+            text-align: center;
             border: 1px solid #e6c778;
-            border-radius: 22px;
+            border-radius: 25px;
+            background: rgba(12, 43, 34, 0.9);
+            box-shadow: 0 0 40px rgba(230, 199, 120, 0.2);
+            animation: appear 1s ease;
+        }
 
-            background: rgba(255, 255, 255, 0.06);
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-            box-shadow: 0 0 35px rgba(230, 199, 120, 0.2);
+        .icon {
+            font-size: 55px;
+            margin-bottom: 20px;
         }
 
         h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 55px;
             color: #f5d98b;
-            font-size: 35px;
+            margin-bottom: 25px;
         }
 
-        p {
-            line-height: 1.9;
-            color: #e4e9e5;
-            font-size: 14px;
+        .message {
+            font-size: 13px;
+            line-height: 2;
+            color: #e1e9e3;
+            margin-bottom: 25px;
         }
 
-        a {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 15px 25px;
+        .love {
+            font-size: 30px;
+            font-weight: 700;
+            color: #ff9da9;
+            margin: 25px 0;
+            text-shadow: 0 0 15px rgba(255, 100, 130, 0.4);
+        }
 
+        .merry {
+            font-size: 17px;
+            font-weight: 600;
+            color: #f5d98b;
+            margin-bottom: 30px;
+        }
+
+        .wa-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 15px;
             border-radius: 30px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
 
+        .wa-btn:hover {
+            transform: scale(1.04);
+        }
+
+        .btn-one {
             background: #e6c778;
             color: #10251e;
-
-            text-decoration: none;
-            font-weight: bold;
         }
 
-    </style>
+        .btn-two {
+            border: 1px solid #e6c778;
+            color: #ffe5a1;
+            background: rgba(230, 199, 120, 0.1);
+        }
 
+        .footer {
+            margin-top: 30px;
+            font-size: 10px;
+            color: #9eafa5;
+            letter-spacing: 1px;
+        }
+
+        .snow {
+            position: fixed;
+            top: -20px;
+            color: white;
+            pointer-events: none;
+            animation: fall linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh);
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <div class="letter">
+    <div class="container">
 
-        <h1>Something For You 💌</h1>
+        <div class="icon">💌</div>
 
-        <p>
+        <h1>Something For You</h1>
 
-            Hi, Nauli.
-
+        <div class="message">
+            Hi, Nauli. ❤️
             <br><br>
 
-            There's something I've been wanting
-            to tell you.
-
+            There's something I've been wanting to tell you.
             <br><br>
 
-            But before anything else,
-            I just want you to know that
-            you are someone special.
-
+            But before anything else, I just want you to know
+            that you are someone special.
             <br><br>
 
-            Thank you for being part of
-            this little Christmas surprise.
-
+            Thank you for being part of this little Christmas surprise.
             <br><br>
-            
+
+            May God bless you, guide your steps,
+            and fill your life with happiness.
+        </div>
+
+        <div class="love">
             I LOVE YOU ❤️
-            
-            <br><br>
-            
-            Merry Christmas, Nauli! 🎄
+        </div>
 
-        </p>
+        <div class="merry">
+            MERRY CHRISTMAS, NAULI! 🎄✨
+        </div>
 
-        <a id="whatsapp-btn" href="#">
-            BALAS PESAN YOS 💌
+        <!-- TOMBOL WHATSAPP PERTAMA -->
+        <a id="buttonOne"
+           class="wa-btn btn-one"
+           target="_blank"
+           rel="noopener">
+            I HAVE SOMETHING TO SAY 💌
         </a>
+
+        <!-- TOMBOL WHATSAPP KEDUA -->
+        <a id="buttonTwo"
+           class="wa-btn btn-two"
+           target="_blank"
+           rel="noopener">
+            MERRY CHRISTMAS TOO 🎄
+        </a>
+
+        <div class="footer">
+            MADE WITH ❤️ JUST FOR YOU
+        </div>
 
     </div>
 
     <script>
-
-        // GANTI NOMOR DI BAWAH INI
+        // GANTI DENGAN NOMOR WHATSAPP LU
+        // Format: 62xxxxxxxxxx
+        // Jangan pakai +, spasi, atau angka 0 di depan.
 
         const nomor = "6287884791567";
 
-        const pesan =
-            "Hai Yosafat! Aku sudah membaca pesanmu. 😊";
+        // PESAN TOMBOL PERTAMA
+        const pesanPertama =
+            "Hi Yos! I have something to say too. ❤️";
 
-        document.getElementById("whatsapp-btn").href =
-            "https://wa.me/" + nomor +
-            "?text=" + encodeURIComponent(pesan);
+        // PESAN TOMBOL KEDUA
+        const pesanKedua =
+            "Merry Christmas too, Yos! 🎄✨ Thank you for the beautiful surprise!";
 
+        // MEMBUAT LINK WHATSAPP
+        document.getElementById("buttonOne").href =
+            "https://wa.me/" + nomor + "?text=" +
+            encodeURIComponent(pesanPertama);
+
+        document.getElementById("buttonTwo").href =
+            "https://wa.me/" + nomor + "?text=" +
+            encodeURIComponent(pesanKedua);
+
+
+        // ANIMASI SALJU
+        for (let i = 0; i < 40; i++) {
+
+            const snow = document.createElement("div");
+
+            snow.className = "snow";
+            snow.innerHTML = "❄";
+
+            snow.style.left = Math.random() * 100 + "%";
+            snow.style.fontSize = (Math.random() * 12 + 8) + "px";
+            snow.style.animationDuration = (Math.random() * 8 + 5) + "s";
+            snow.style.animationDelay = Math.random() * 5 + "s";
+
+            document.body.appendChild(snow);
+        }
     </script>
 
 </body>
-
 </html>
