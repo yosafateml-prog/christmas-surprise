@@ -9,7 +9,7 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
-    background: radial-gradient(circle at center, #12352c, #061a18, #020b0c);
+    background: radial-gradient(circle, #12352c, #061a18, #020b0c);
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
@@ -37,7 +37,7 @@ h1 {
     font-family: 'Great Vibes', cursive;
     font-size: clamp(65px, 12vw, 110px);
     color: #f5d98b;
-    text-shadow: 0 0 25px rgba(255, 215, 120, 0.5);
+    text-shadow: 0 0 25px rgba(255, 215, 120, .5);
 }
 
 #christmas-tree {
@@ -61,26 +61,23 @@ h2 {
 }
 
 button {
-    margin-top: 30px;
-    padding: 15px 35px;
+    margin-top: 25px;
+    padding: 15px 30px;
     border: 1px solid #e6c778;
     border-radius: 30px;
-    background: rgba(230, 199, 120, 0.12);
+    background: rgba(230, 199, 120, .15);
     color: #ffe5a1;
     font-size: 12px;
     letter-spacing: 2px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 button:hover {
     background: #e6c778;
     color: #10251e;
-    box-shadow: 0 0 30px rgba(230, 199, 120, 0.5);
     transform: scale(1.05);
 }
-
-/* BINTANG */
 
 .stars {
     position: fixed;
@@ -93,8 +90,6 @@ button:hover {
         radial-gradient(2px 2px at 90% 60%, white, transparent);
     background-size: 250px 250px;
 }
-
-/* SALJU */
 
 .snow-container {
     position: fixed;
@@ -117,29 +112,29 @@ button:hover {
     }
 }
 
-/* SURPRISE MESSAGE */
+/* POP-UP SURPRISE */
 
 .surprise-modal {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, .85);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 100;
     padding: 20px;
-    animation: fadeIn 0.5s ease;
+    overflow-y: auto;
 }
 
 .surprise-box {
-    max-width: 420px;
+    max-width: 430px;
     width: 100%;
     padding: 35px 25px;
     text-align: center;
     border: 1px solid #e6c778;
     border-radius: 20px;
     background: linear-gradient(145deg, #12352c, #061a18);
-    box-shadow: 0 0 40px rgba(230, 199, 120, 0.2);
+    box-shadow: 0 0 40px rgba(230, 199, 120, .3);
 }
 
 .gift-icon {
@@ -158,14 +153,34 @@ button:hover {
     line-height: 1.9;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
+/* TOMBOL CONFESSION */
+
+.next-btn {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 30px;
+    background: #e6c778;
+    color: #10251e;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.next-btn:hover {
+    background: #ffe5a1;
+    transform: scale(1.04);
+}
+
+@media (max-width: 480px) {
+    .surprise-box {
+        padding: 30px 20px;
     }
 
-    to {
-        opacity: 1;
-        transform: scale(1);
+    .surprise-box h2 {
+        font-size: 36px;
     }
 }
