@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Christmas Surprise | For Nauli</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="stars"></div>
+
+    <div class="snow-container" id="snow"></div>
+
+    <main class="christmas-container">
+
+        <p class="subtitle">A LITTLE CHRISTMAS SURPRISE FOR</p>
+
+        <h1>NAULI</h1>
+
+        <div id="christmas-tree"></div>
+
+        <h2>Merry Christmas ✨</h2>
+
+        <p class="message">
+            May your Christmas be filled with happiness,
+            warmth, and beautiful moments.
+        </p>
+
+        <button id="surprise-btn">
+            OPEN YOUR SURPRISE 🎁
+        </button>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
