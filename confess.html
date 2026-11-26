@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Something For You</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #061a18, #12352c);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .letter {
+            max-width: 450px;
+            padding: 35px 25px;
+            border: 1px solid #e6c778;
+            border-radius: 22px;
+            background: rgba(255,255,255,0.06);
+            box-shadow: 0 0 35px rgba(230,199,120,0.2);
+        }
+
+        h1 {
+            color: #f5d98b;
+            font-size: 35px;
+        }
+
+        p {
+            line-height: 1.9;
+            color: #e4e9e5;
+            font-size: 14px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 15px 25px;
+            border-radius: 30px;
+            background: #e6c778;
+            color: #10251e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="letter">
+
+        <h1>Something For You 💌</h1>
+
+        <p>
+            Hi, Nauli.
+            <br><br>
+            There's something I've been wanting
+            to tell you.
+            <br><br>
+            But before anything else,
+            I just want you to know that
+            you are someone special.
+            <br><br>
+            Thank you for being part of
+            this little Christmas surprise.
+            <br><br>
+            ❤️
+        </p>
+
+        <a id="whatsapp-btn" href="#">
+            BALAS PESAN YOS 💌
+        </a>
+
+    </div>
+
+    <script>
+        const nomor = "6287884791567";
+
+        const pesan = "Hai Yosafat! Aku sudah membaca pesanmu. 😊";
+
+        document.getElementById("whatsapp-btn").href =
+            "https://wa.me/" + nomor + "?text=" +
+            encodeURIComponent(pesan);
+    </script>
+
+</body>
+</html>
