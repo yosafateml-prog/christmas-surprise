@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: radial-gradient(circle at center, #12352c, #061a18, #020b0c);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.christmas-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.subtitle {
+    color: #d9c58b;
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(65px, 12vw, 110px);
+    color: #f5d98b;
+    text-shadow: 0 0 25px rgba(255, 215, 120, 0.5);
+}
+
+#christmas-tree {
+    width: 100%;
+    max-width: 500px;
+    height: 380px;
+    margin: 10px auto;
+}
+
+h2 {
+    color: #f5d98b;
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.message {
+    color: #d4e4dc;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 400px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 35px;
+    border: 1px solid #e6c778;
+    border-radius: 30px;
+    background: rgba(230, 199, 120, 0.12);
+    color: #ffe5a1;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e6c778;
+    color: #10251e;
+    box-shadow: 0 0 30px rgba(230, 199, 120, 0.5);
+    transform: scale(1.05);
+}
+
+/* BINTANG */
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, white, transparent),
+        radial-gradient(2px 2px at 70% 20%, white, transparent),
+        radial-gradient(2px 2px at 40% 80%, white, transparent),
+        radial-gradient(2px 2px at 90% 60%, white, transparent);
+    background-size: 250px 250px;
+}
+
+/* SALJU */
+
+.snow-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.snowflake {
+    position: absolute;
+    top: -20px;
+    color: white;
+    animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+/* SURPRISE MESSAGE */
+
+.surprise-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    padding: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+.surprise-box {
+    max-width: 420px;
+    width: 100%;
+    padding: 35px 25px;
+    text-align: center;
+    border: 1px solid #e6c778;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #12352c, #061a18);
+    box-shadow: 0 0 40px rgba(230, 199, 120, 0.2);
+}
+
+.gift-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.surprise-box h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+}
+
+.surprise-box p {
+    color: #e4e9e5;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
