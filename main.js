@@ -176,6 +176,7 @@ surpriseBtn.addEventListener("click", () => {
             </p>
 
             <button id="close-surprise">CLOSE ✨</button>
+            <a href="confess.html" class="next-btn">NEXT: CONFESSION 💌</a>
         </div>
     `;
 
