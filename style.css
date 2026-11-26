@@ -169,3 +169,25 @@ button:hover {
         transform: scale(1);
     }
 }
+
+.next-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 25px;
+    border: 1px solid #e6c778;
+    border-radius: 30px;
+    background: #e6c778;
+    color: #10251e;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.next-btn:hover {
+    background: #ffe5a1;
+    box-shadow: 0 0 25px rgba(230, 199, 120, 0.5);
+    transform: scale(1.05);
+}
