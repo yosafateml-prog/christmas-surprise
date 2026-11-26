@@ -1,5 +1,5 @@
 // ======================================
-// CHRISTMAS TREE 3D
+// CHRISTMAS TREE 3D - FOR NAULI
 // ======================================
 
 const container = document.getElementById("christmas-tree");
@@ -33,29 +33,46 @@ if (container && typeof THREE !== "undefined") {
 
     container.appendChild(renderer.domElement);
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
+    const ambientLight = new THREE.AmbientLight(
+        0xffffff,
+        1.2
+    );
+
     scene.add(ambientLight);
 
-    const mainLight = new THREE.PointLight(0xffd98a, 2, 30);
+    const mainLight = new THREE.PointLight(
+        0xffd98a,
+        2,
+        30
+    );
+
     mainLight.position.set(3, 5, 5);
+
     scene.add(mainLight);
 
     const tree = new THREE.Group();
+
     scene.add(tree);
 
-    // Batang pohon
+    // BATANG POHON
 
     const trunk = new THREE.Mesh(
-        new THREE.CylinderGeometry(0.3, 0.4, 1.2, 16),
+        new THREE.CylinderGeometry(
+            0.3,
+            0.4,
+            1.2,
+            16
+        ),
         new THREE.MeshStandardMaterial({
             color: 0x70401f
         })
     );
 
     trunk.position.y = -2.2;
+
     tree.add(trunk);
 
-    // Daun pohon
+    // DAUN POHON
 
     const greenMaterial = new THREE.MeshStandardMaterial({
         color: 0x087a43,
@@ -74,10 +91,11 @@ if (container && typeof THREE !== "undefined") {
         );
 
         cone.position.y = -1.5 + i * 0.85;
+
         tree.add(cone);
     }
 
-    // Bintang
+    // BINTANG POHON
 
     const star = new THREE.Mesh(
         new THREE.OctahedronGeometry(0.4),
@@ -89,9 +107,10 @@ if (container && typeof THREE !== "undefined") {
     );
 
     star.position.y = 2.1;
+
     tree.add(star);
 
-    // Lampu pohon
+    // LAMPU POHON
 
     const colors = [
         0xff0000,
@@ -104,11 +123,17 @@ if (container && typeof THREE !== "undefined") {
     for (let i = 0; i < 45; i++) {
 
         const y = -2.2 + Math.random() * 4;
+
         const radius = 1.5 * (2.2 - y) / 4.4;
+
         const angle = Math.random() * Math.PI * 2;
 
         const light = new THREE.Mesh(
-            new THREE.SphereGeometry(0.09, 16, 16),
+            new THREE.SphereGeometry(
+                0.09,
+                16,
+                16
+            ),
             new THREE.MeshStandardMaterial({
                 color: colors[i % colors.length],
                 emissive: colors[i % colors.length],
@@ -125,13 +150,14 @@ if (container && typeof THREE !== "undefined") {
         tree.add(light);
     }
 
-    // Animasi pohon
+    // ANIMASI POHON
 
     function animate() {
 
         requestAnimationFrame(animate);
 
         tree.rotation.y += 0.003;
+
         star.rotation.y += 0.015;
 
         renderer.render(scene, camera);
@@ -139,7 +165,7 @@ if (container && typeof THREE !== "undefined") {
 
     animate();
 
-    // Responsif
+    // RESPONSIVE
 
     window.addEventListener("resize", () => {
 
@@ -152,8 +178,11 @@ if (container && typeof THREE !== "undefined") {
             container.clientWidth,
             container.clientHeight
         );
+
     });
+
 }
+
 
 // ======================================
 // ANIMASI SALJU
@@ -168,9 +197,11 @@ if (snowContainer) {
         const snowflake = document.createElement("div");
 
         snowflake.className = "snowflake";
-        snowflake.innerHTML = "❄";
 
-        snowflake.style.left = Math.random() * 100 + "%";
+        snowflake.innerHTML = "&#10052;";
+
+        snowflake.style.left =
+            Math.random() * 100 + "%";
 
         snowflake.style.fontSize =
             (Math.random() * 10 + 8) + "px";
@@ -183,10 +214,12 @@ if (snowContainer) {
 
         snowContainer.appendChild(snowflake);
     }
+
 }
 
+
 // ======================================
-// SURPRISE MESSAGE
+// SURPRISE MESSAGE - FOR NAULI
 // ======================================
 
 const surpriseBtn = document.getElementById("surprise-btn");
@@ -195,7 +228,7 @@ if (surpriseBtn) {
 
     surpriseBtn.addEventListener("click", () => {
 
-        // Hindari pop-up ganda
+        // MENCEGAH MODAL TERBUKA BERULANG
 
         if (document.querySelector(".surprise-modal")) {
             return;
@@ -206,6 +239,7 @@ if (surpriseBtn) {
         modal.className = "surprise-modal";
 
         modal.innerHTML = `
+
             <div class="surprise-box">
 
                 <div class="gift-icon">🎁</div>
@@ -213,6 +247,7 @@ if (surpriseBtn) {
                 <h2>For You, Nauli ✨</h2>
 
                 <p>
+
                     Merry Christmas, Nauli! 🎄
 
                     <br><br>
@@ -229,26 +264,19 @@ if (surpriseBtn) {
                     <br><br>
 
                     Keep shining and never stop being you. ❤️
+
                 </p>
 
-                <button id="close-surprise">
-                    CLOSE ✨
-                </button>
-
                 <a href="./confess.html" class="next-btn">
-                    NEXT: CONFESSION 💌
+                    NEXT 💌
                 </a>
 
             </div>
+
         `;
 
         document.body.appendChild(modal);
 
-        const closeBtn = document.getElementById("close-surprise");
-
-        closeBtn.addEventListener("click", () => {
-            modal.remove();
-        });
-
     });
+
 }
